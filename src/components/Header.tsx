@@ -13,12 +13,12 @@ export function Header() {
           uTsk<span className="text-amber-600 -ml-0.5 shadow-lg">+</span>
         </Link>
         {session?.user && (
-          <a
+          <Link
             href="/dashboard"
             className="bg-white hidden md:flex px-1 lg:px-3 py-1 md:text-sm rounded text-black"
           >
             Meu Painel
-          </a>
+          </Link>
         )}
       </div>
       {status === "loading" ? (
