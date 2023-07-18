@@ -45,7 +45,7 @@ export default function Dashboard({ user }: HomeProps) {
 
   async function handleShare(id: string) {
     await navigator.clipboard.writeText(`
-      ${process.env.NEXTPUBLIC_URL}/task/${id}
+    http://localhost:3000/task/${id}
     `)
 
     toast.info('Copiado para Área de Transferência!')
