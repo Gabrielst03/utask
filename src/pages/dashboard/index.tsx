@@ -45,7 +45,7 @@ export default function Dashboard({ user }: HomeProps) {
 
   async function handleShare(id: string) {
     await navigator.clipboard.writeText(`
-    http://localhost:3000/task/${id}
+    https://utask.vercel.app/task/${id}
     `)
 
     toast.info('Copiado para Área de Transferência!')
