@@ -155,7 +155,8 @@ export default function Dashboard({ user }: HomeProps) {
 
         <div className="flex flex-col mt-2 md:mt-8 gap-3 w-full">
           {tasks ? tasks.map((item) => (
-            <div
+            <Link
+             href={`/task/${item.id}`}
               key={item.id}
               className="flex items-center justify-between w-full py-3 rounded-lg border text-zinc-800 border-gray-300 px-4"
             >
@@ -171,7 +172,7 @@ export default function Dashboard({ user }: HomeProps) {
               <button className="px-3 py-1 text-sm rounded bg-red-100 text-red-600" onClick={() => deleteTask(item.id)}>
                 <Trash2 className="w-5 h-5"/>
               </button>
-            </div>
+            </Link>
           )): (
             <h1>Você não possui tarefas ainda 😢</h1>
           )}
